@@ -25,10 +25,16 @@ name: $(TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd
 
 resources:
   repositories:
+  - repository: sonic-mgmt
+    type: github
+    name: sonic-net/sonic-mgmt
+    ref: master
+    endpoint: sonic-net
+  repositories:
   - repository: buildimage
     type: github
-    name: sonic-otn/sonic-buildimage
-    endpoint: sonic-otn
+    name: sonic-net/sonic-buildimage
+    endpoint: sonic-net
     ref: otn_pre_202411
 
 variables:
